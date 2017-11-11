@@ -1,0 +1,26 @@
+TO install this plugin:
+- Clone the project in your plugin folder
+- Add hook in app/view/wiki/show.html.erb as follow:
+		
+	Before:
+
+		<% content_for :sidebar do %>
+		  <%= render :partial => 'sidebar' %>
+		<% end %>
+
+		<% html_title @page.pretty_title %>
+
+	After:
+		<% content_for :sidebar do %>
+		  <%= render :partial => 'sidebar' %>
+		<% end %>
+
+		<%= call_hook :wiki_comment_section_view %> <!-- Added Hook -->
+
+		<% html_title @page.pretty_title %>
+
+
+- Run the migration to adjust the db settings: bundle exec rake redmine:plugins:migrate RAILS_ENV=production
+- Restart Application and boom!
+
+
