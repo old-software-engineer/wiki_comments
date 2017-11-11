@@ -1,4 +1,6 @@
-TO install this plugin:
+Install this in your redmine application to add comments in your every wiki.
+
+To install this plugin:
 - Clone the project in your plugin folder
 - Add hook in app/view/wiki/show.html.erb as follow:
 		
