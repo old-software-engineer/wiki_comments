@@ -1,4 +1,4 @@
-class AddWikiComments < ActiveRecord::Migration[5.1]
+class AddWikiComments < ActiveRecord::Migration
   def self.up
     add_column :wiki_pages, :comments_count, :integer, :default => 0, :null => false
   end

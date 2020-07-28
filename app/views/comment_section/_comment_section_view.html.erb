@@ -25,7 +25,7 @@
 			    <% @wiki_pages_comments.order('id ASC').each do |comment| %>
 			    <h4>Added by <a class="user active" href="/users/<%=comment.author.id%>"><%= comment.author.firstname%>, <%= comment.created_on.strftime("%-d/%-m/%y: %H:%M %Z")%></a></h4>
 			    <div class="wiki">
-			    	<p><%= comment.content%></p>
+			    	<p><%= comment.comments%></p>
 			    </div>
 			    <% end %>
 			</div>
